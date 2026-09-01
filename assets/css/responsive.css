@@ -1,0 +1,221 @@
+@media (max-width: 1023px) {
+  .brand-text {
+    max-width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .site-nav ul {
+    gap: 18px;
+  }
+
+  .site-nav a {
+    font-size: 12px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    max-width: 520px;
+  }
+
+  .content-grid,
+  .insight-grid,
+  .project-facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .palette-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 15px;
+  }
+
+  .header-inner {
+    min-height: 68px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    position: fixed;
+    inset: 68px 0 0;
+    visibility: hidden;
+    background: var(--color-white);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: visibility var(--ease), opacity var(--ease), transform var(--ease);
+  }
+
+  .site-nav.is-open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .site-nav ul {
+    display: block;
+    padding: 24px var(--gutter);
+  }
+
+  .site-nav a {
+    padding: 18px 0;
+    font-size: clamp(26px, 9vw, 40px);
+    letter-spacing: -0.04em;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .site-nav a::after {
+    right: auto;
+    bottom: 12px;
+    width: 42px;
+  }
+
+  .hero {
+    min-height: calc(100svh - 68px);
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: clamp(58px, 20vw, 92px);
+  }
+
+  .hero-index {
+    display: none;
+  }
+
+  .page-title {
+    font-size: clamp(46px, 16vw, 72px);
+  }
+
+  .section-head {
+    display: block;
+  }
+
+  .section-description {
+    margin-top: 18px;
+  }
+
+  .archive-grid,
+  .content-grid,
+  .insight-grid,
+  .project-facts,
+  .metric-grid,
+  .footer-top,
+  .footer-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-intro-grid,
+  .rules-grid,
+  .dont-grid,
+  .background-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-logo-stage {
+    min-height: 300px;
+  }
+
+  .brand-guide-meta div {
+    display: none;
+  }
+
+  .palette-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .palette-swatch {
+    aspect-ratio: 1.35;
+  }
+
+  .rule-card {
+    min-height: 300px;
+  }
+
+  .dont-card {
+    min-height: 220px;
+  }
+
+  .archive-link {
+    min-height: 230px;
+    border-right: 0;
+  }
+
+  .content-grid {
+    gap: 36px 0;
+  }
+
+  .content-thumb {
+    aspect-ratio: 5 / 4;
+  }
+
+  .footer-top {
+    gap: 46px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .process-list li {
+    grid-template-columns: 42px 1fr;
+    gap: 12px;
+  }
+
+  .process-list p {
+    grid-column: 2;
+  }
+
+  .project-visual::before {
+    top: 16%;
+    right: -18%;
+    width: 80%;
+  }
+
+  .project-visual-title {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-text {
+    max-width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .metric-card,
+  .insight-card,
+  .fact-card {
+    padding: 22px;
+  }
+
+  .chart {
+    gap: 7px;
+  }
+
+  .empty-note {
+    padding: 36px 22px;
+  }
+}
