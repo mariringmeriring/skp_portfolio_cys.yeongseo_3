@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="제작한 관광 카드뉴스와 영상 콘텐츠를 모은 아카이브입니다.">
+  <meta name="theme-color" content="#a9d8f3">
+  <title>Contents · Tourism Content Archive</title>
+  <link rel="icon" href="assets/images/common/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/reset.css"><link rel="stylesheet" href="assets/css/variables.css"><link rel="stylesheet" href="assets/css/common.css"><link rel="stylesheet" href="assets/css/pages.css"><link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">본문 바로가기</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Tourism Content Archive 홈"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text">TOURISM CONTENT ARCHIVE</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="메뉴 열기"><span class="menu-toggle-lines" aria-hidden="true"></span></button>
+    <nav class="site-nav" id="site-navigation" aria-label="주요 메뉴"><ul><li><a href="brand.html">BRAND</a></li><li><a href="report.html">REPORT</a></li><li><a href="contents.html" aria-current="page">CONTENTS</a></li><li><a href="sns.html">SNS</a></li><li><a href="final.html">FINAL PROJECT</a></li></ul></nav>
+  </div></header>
+
+  <main id="main-content">
+    <header class="page-header"><div class="container">
+      <p class="eyebrow">02 · Created Works</p>
+      <h1 class="page-title">CONTENTS<span class="accent">.</span></h1>
+      <p class="page-intro">조사를 바탕으로 제작한 카드뉴스와 영상 콘텐츠를 모아 보여주는 공간입니다. 카드뉴스는 순서에 따라 한 장씩 크게 감상할 수 있습니다.</p>
+    </div></header>
+
+    <section class="section section--soft" aria-labelledby="works-heading"><div class="container">
+      <div class="section-head"><h2 class="section-title" id="works-heading">Selected<br>Works</h2><p class="section-description">콘텐츠 형식별로 결과물을 분류하고 제작 의도와 핵심 메시지를 함께 기록합니다.</p></div>
+      <div class="filter-list" data-filter-group data-filter-target=".filterable-content" aria-label="콘텐츠 형식 필터">
+        <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">전체</button>
+        <button class="filter-button" type="button" data-filter="cardnews" aria-pressed="false">카드뉴스</button>
+        <button class="filter-button" type="button" data-filter="video" aria-pressed="false">영상</button>
+      </div>
+      <div class="content-stack">
+        <article class="cardnews-gallery filterable-content" data-category="cardnews" data-carousel aria-labelledby="cardnews-title">
+          <div class="cardnews-gallery-head">
+            <div><span class="tag">CARD NEWS</span><h3 id="cardnews-title">BIC 2026 · 이 깜깜</h3><p>부산 인디게임 축제와 기록 복원 게임을 소개하는 NARU 카드뉴스입니다.</p></div>
+            <p class="cardnews-counter" aria-live="polite"><strong data-carousel-current>01</strong><span>/ 03</span></p>
+          </div>
+
+          <div class="cardnews-gallery-body">
+            <div class="cardnews-viewer" tabindex="0" aria-label="카드뉴스 슬라이더. 왼쪽과 오른쪽 방향키로 이동할 수 있습니다.">
+              <div class="cardnews-slides">
+                <figure class="cardnews-slide" data-carousel-slide><img src="assets/images/contents/naru-cardnews-01.jpg" alt="1장. 요즘 인디게임에서 가장 눈에 띄는 이 깜깜 표지"></figure>
+                <figure class="cardnews-slide" data-carousel-slide hidden><img src="assets/images/contents/naru-cardnews-02.jpg" alt="2장. BIC 2026 현장을 방문한 NARU 캐릭터"></figure>
+                <figure class="cardnews-slide" data-carousel-slide hidden><img src="assets/images/contents/naru-cardnews-03.jpg" alt="3장. 키워드로 불탄 사건 기록을 복원하는 게임 보존계 소개"></figure>
+              </div>
+              <button class="carousel-button carousel-button--prev" type="button" data-carousel-prev aria-label="이전 카드뉴스" disabled><span aria-hidden="true">←</span></button>
+              <button class="carousel-button carousel-button--next" type="button" data-carousel-next aria-label="다음 카드뉴스"><span aria-hidden="true">→</span></button>
+            </div>
+
+            <div class="cardnews-thumbnails" role="tablist" aria-label="카드뉴스 페이지 선택">
+              <button class="cardnews-thumbnail is-active" type="button" role="tab" data-carousel-dot="0" aria-selected="true" aria-label="1장 보기"><img src="assets/images/contents/naru-cardnews-01.jpg" alt=""></button>
+              <button class="cardnews-thumbnail" type="button" role="tab" data-carousel-dot="1" aria-selected="false" aria-label="2장 보기" tabindex="-1"><img src="assets/images/contents/naru-cardnews-02.jpg" alt=""></button>
+              <button class="cardnews-thumbnail" type="button" role="tab" data-carousel-dot="2" aria-selected="false" aria-label="3장 보기" tabindex="-1"><img src="assets/images/contents/naru-cardnews-03.jpg" alt=""></button>
+            </div>
+          </div>
+        </article>
+
+        <div class="filterable-content" data-category="video">
+          <div class="content-subhead"><h3>Video Archive</h3><p>영상 콘텐츠는 추후 실제 작업물로 교체할 수 있습니다.</p></div>
+          <div class="content-grid">
+            <article class="content-card"><div class="content-thumb"><span class="thumb-label">SHORT FILM</span><span class="thumb-number">01</span></div><span class="tag">영상</span><h3>여행의 한 장면</h3><p>장소의 분위기와 소리를 짧은 호흡으로 담은 영상</p></article>
+            <article class="content-card"><div class="content-thumb"><span class="thumb-label">REELS</span><span class="thumb-number">02</span></div><span class="tag">영상</span><h3>60초 로컬 트립</h3><p>짧은 시간 안에 지역의 매력을 전달하는 세로형 영상</p></article>
+            <article class="content-card"><div class="content-thumb"><span class="thumb-label">INTERVIEW</span><span class="thumb-number">03</span></div><span class="tag">영상</span><h3>로컬 크리에이터</h3><p>지역을 만드는 사람들의 이야기를 기록한 인터뷰 영상</p></article>
+          </div>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="section"><div class="container"><div class="empty-note"><strong>새로운 콘텐츠가 추가될 예정입니다.</strong><p>실제 썸네일과 영상 링크가 준비되면 이 영역을 새로운 작업물로 확장하세요.</p></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-top"><p class="footer-title">Local stories,<br>new perspectives.</p><div class="footer-meta"><div><span class="footer-label">PROJECT</span><p>SK플래닛 관광 콘텐츠 아카이브</p></div><div><span class="footer-label">CREATOR</span><p>이름 또는 팀명을 입력하세요</p></div></div></div><div class="footer-bottom"><p>© <span data-current-year>2026</span> Tourism Content Archive.</p><p>Designed for SK Planet Project.</p></div></div></footer>
+</body>
+</html>

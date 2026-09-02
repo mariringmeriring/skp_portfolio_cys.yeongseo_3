@@ -1,0 +1,24 @@
+:root {
+  --color-brand-main: #a9d8f3;
+  --color-brand-sub: #eaf6fc;
+  --color-accent: #ff9eaa;
+  --color-support: #63b3df;
+  --color-primary: var(--color-support);
+  --color-primary-dark: #17324d;
+  --color-primary-soft: var(--color-brand-sub);
+  --color-ink: #17324d;
+  --color-muted: #63778a;
+  --color-line: #dce8ef;
+  --color-surface: #f4f9fc;
+  --color-white: #fafcfd;
+  --font-sans: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+  --font-display: Inter, "Helvetica Neue", var(--font-sans);
+  --container: 1240px;
+  --gutter: clamp(20px, 4vw, 56px);
+  --section-space: clamp(76px, 10vw, 144px);
+  --radius-sm: 8px;
+  --radius-md: 18px;
+  --radius-lg: 30px;
+  --shadow-soft: 0 18px 50px rgba(18, 22, 29, 0.08);
+  --ease: 180ms ease;
+}
