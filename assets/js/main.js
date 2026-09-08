@@ -124,3 +124,34 @@ carousels.forEach((carousel) => {
 
   showSlide(0);
 });
+
+const previewFrame = document.querySelector("#spoton-preview");
+const previewLoading = document.querySelector("[data-preview-loading]");
+const previewReloadButton = document.querySelector("[data-preview-reload]");
+const previewFullscreenButton = document.querySelector("[data-preview-fullscreen]");
+const phonePreview = document.querySelector("[data-phone-preview]");
+
+if (previewFrame && previewLoading) {
+  previewFrame.addEventListener("load", () => {
+    previewLoading.classList.add("is-loaded");
+  });
+
+  previewReloadButton?.addEventListener("click", () => {
+    previewLoading.classList.remove("is-loaded");
+    previewFrame.src = previewFrame.src;
+  });
+
+  previewFullscreenButton?.addEventListener("click", async () => {
+    if (!phonePreview?.requestFullscreen) return;
+
+    try {
+      if (document.fullscreenElement) {
+        await document.exitFullscreen();
+      } else {
+        await phonePreview.requestFullscreen();
+      }
+    } catch (error) {
+      console.warn("전체 화면을 열 수 없습니다.", error);
+    }
+  });
+}

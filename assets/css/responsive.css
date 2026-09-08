@@ -40,6 +40,11 @@
     grid-template-columns: 1fr;
   }
 
+  .spoton-demo-grid {
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 54px;
+  }
+
   .palette-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 28px 16px;
@@ -233,6 +238,44 @@
 
   .project-visual-title {
     max-width: 90%;
+  }
+
+  .spoton-intro-grid,
+  .spoton-demo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spoton-intro-aside {
+    max-width: none;
+  }
+
+  .spoton-demo::before {
+    display: none;
+  }
+
+  .spoton-demo-copy {
+    max-width: 520px;
+  }
+
+  .phone-stage {
+    margin-top: 8px;
+  }
+
+  .phone-shell {
+    width: min(100%, 390px);
+    border-radius: 46px;
+  }
+
+  .phone-screen {
+    border-radius: 36px;
+  }
+
+  .phone-stage::before {
+    right: -14%;
+  }
+
+  .phone-stage::after {
+    left: -8%;
   }
 }
 
