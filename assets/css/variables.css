@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "KBL Jump Extended";
+  src: url("../fonts/KBLJump-ExtraBoldExtended.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
 :root {
   --color-brand-main: #a9d8f3;
   --color-brand-sub: #eaf6fc;
@@ -13,6 +21,7 @@
   --color-white: #fafcfd;
   --font-sans: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
   --font-display: Inter, "Helvetica Neue", var(--font-sans);
+  --font-impact: "KBL Jump Extended", var(--font-display);
   --container: 1240px;
   --gutter: clamp(20px, 4vw, 56px);
   --section-space: clamp(76px, 10vw, 144px);

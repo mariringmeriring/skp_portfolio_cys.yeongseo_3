@@ -187,7 +187,7 @@ body.menu-open {
 
 .page-title {
   max-width: 880px;
-  font-family: var(--font-display);
+  font-family: var(--font-impact);
   font-size: clamp(46px, 7.5vw, 104px);
   font-weight: 700;
   letter-spacing: -0.065em;
@@ -222,7 +222,7 @@ body.menu-open {
 }
 
 .section-title {
-  font-family: var(--font-display);
+  font-family: var(--font-impact);
   font-size: clamp(30px, 4vw, 54px);
   font-weight: 700;
   letter-spacing: -0.05em;
@@ -318,7 +318,7 @@ body.menu-open {
 .footer-title {
   max-width: 620px;
   color: var(--color-white);
-  font-family: var(--font-display);
+  font-family: var(--font-impact);
   font-size: clamp(30px, 4vw, 52px);
   font-weight: 700;
   letter-spacing: -0.05em;
