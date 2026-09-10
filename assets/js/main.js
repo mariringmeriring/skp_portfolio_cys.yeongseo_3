@@ -60,3 +60,98 @@ filterGroups.forEach((group) => {
 
 const yearElement = document.querySelector("[data-current-year]");
 if (yearElement) yearElement.textContent = new Date().getFullYear();
+
+const carousels = document.querySelectorAll("[data-carousel]");
+
+carousels.forEach((carousel) => {
+  const slides = [...carousel.querySelectorAll("[data-carousel-slide]")];
+  const dots = [...carousel.querySelectorAll("[data-carousel-dot]")];
+  const previousButton = carousel.querySelector("[data-carousel-prev]");
+  const nextButton = carousel.querySelector("[data-carousel-next]");
+  const currentLabel = carousel.querySelector("[data-carousel-current]");
+  const viewer = carousel.querySelector(".cardnews-viewer");
+  let currentIndex = 0;
+  let touchStartX = 0;
+
+  const showSlide = (nextIndex) => {
+    currentIndex = Math.max(0, Math.min(nextIndex, slides.length - 1));
+
+    slides.forEach((slide, index) => {
+      const isCurrent = index === currentIndex;
+      slide.hidden = !isCurrent;
+      slide.setAttribute("aria-hidden", String(!isCurrent));
+    });
+
+    dots.forEach((dot, index) => {
+      const isCurrent = index === currentIndex;
+      dot.classList.toggle("is-active", isCurrent);
+      dot.setAttribute("aria-selected", String(isCurrent));
+      dot.tabIndex = isCurrent ? 0 : -1;
+    });
+
+    previousButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === slides.length - 1;
+    currentLabel.textContent = String(currentIndex + 1).padStart(2, "0");
+  };
+
+  previousButton.addEventListener("click", () => showSlide(currentIndex - 1));
+  nextButton.addEventListener("click", () => showSlide(currentIndex + 1));
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => showSlide(Number(dot.dataset.carouselDot)));
+  });
+
+  viewer.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showSlide(currentIndex - 1);
+    }
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showSlide(currentIndex + 1);
+    }
+  });
+
+  viewer.addEventListener("touchstart", (event) => {
+    touchStartX = event.changedTouches[0].clientX;
+  }, { passive: true });
+
+  viewer.addEventListener("touchend", (event) => {
+    const distance = event.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(distance) < 50) return;
+    showSlide(currentIndex + (distance < 0 ? 1 : -1));
+  }, { passive: true });
+
+  showSlide(0);
+});
+
+const previewFrame = document.querySelector("#spoton-preview");
+const previewLoading = document.querySelector("[data-preview-loading]");
+const previewReloadButton = document.querySelector("[data-preview-reload]");
+const previewFullscreenButton = document.querySelector("[data-preview-fullscreen]");
+const phonePreview = document.querySelector("[data-phone-preview]");
+
+if (previewFrame && previewLoading) {
+  previewFrame.addEventListener("load", () => {
+    previewLoading.classList.add("is-loaded");
+  });
+
+  previewReloadButton?.addEventListener("click", () => {
+    previewLoading.classList.remove("is-loaded");
+    previewFrame.src = previewFrame.src;
+  });
+
+  previewFullscreenButton?.addEventListener("click", async () => {
+    if (!phonePreview?.requestFullscreen) return;
+
+    try {
+      if (document.fullscreenElement) {
+        await document.exitFullscreen();
+      } else {
+        await phonePreview.requestFullscreen();
+      }
+    } catch (error) {
+      console.warn("전체 화면을 열 수 없습니다.", error);
+    }
+  });
+}

@@ -1,91 +1,43 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="관광 자원 조사와 SNS 콘텐츠 기획 자료를 정리한 리포트입니다.">
-  <meta name="theme-color" content="#a9d8f3">
-  <title>Report · Tourism Content Archive</title>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="부산 덕질 관광의 문제를 분석하고 메이플스토리 in 롯데월드 부산을 중심으로 숏폼 콘텐츠 방향을 제안한 리포트입니다.">
+  <meta name="theme-color" content="#a9d8f3"><title>Report · Tourism Content Archive</title>
   <link rel="icon" href="assets/images/common/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="assets/css/variables.css">
-  <link rel="stylesheet" href="assets/css/common.css">
-  <link rel="stylesheet" href="assets/css/pages.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-  <script src="assets/js/main.js" defer></script>
+  <link rel="stylesheet" href="assets/css/reset.css"><link rel="stylesheet" href="assets/css/variables.css"><link rel="stylesheet" href="assets/css/common.css"><link rel="stylesheet" href="assets/css/pages.css"><link rel="stylesheet" href="assets/css/responsive.css"><script src="assets/js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">본문 바로가기</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Tourism Content Archive 홈"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text">TOURISM CONTENT ARCHIVE</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="메뉴 열기"><span class="menu-toggle-lines" aria-hidden="true"></span></button>
-      <nav class="site-nav" id="site-navigation" aria-label="주요 메뉴">
-        <ul>
-          <li><a href="brand.html">BRAND</a></li>
-          <li><a href="report.html" aria-current="page">REPORT</a></li>
-          <li><a href="contents.html">CONTENTS</a></li>
-          <li><a href="sns.html">SNS</a></li>
-          <li><a href="final.html">FINAL PROJECT</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="index.html" aria-label="Tourism Content Archive 홈"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text">TOURISM CONTENT ARCHIVE</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="메뉴 열기"><span class="menu-toggle-lines" aria-hidden="true"></span></button><nav class="site-nav" id="site-navigation" aria-label="주요 메뉴"><ul><li><a href="brand.html">BRAND</a></li><li><a href="report.html" aria-current="page">REPORT</a></li><li><a href="contents.html">CONTENTS</a></li><li><a href="sns.html">SNS</a></li><li><a href="spoton.html">SPOT:ON</a></li><li><a href="final.html">FINAL PROJECT</a></li></ul></nav></div></header>
 
-  <main id="main-content">
-    <header class="page-header">
-      <div class="container">
-        <p class="eyebrow">01 · Research & Planning</p>
-        <h1 class="page-title">REPORT<span class="accent">.</span></h1>
-        <p class="page-intro">관광 자원을 관찰하고 콘텐츠의 가능성을 발견하는 리서치 공간입니다. 장소 정보부터 타깃과 콘텐츠 아이디어까지 체계적으로 기록합니다.</p>
-      </div>
-    </header>
+  <main id="main-content" class="research-report">
+    <header class="report-cover"><div class="container report-cover-grid"><div><p class="eyebrow">01 · Research & Short-form Planning</p><h1>FANDOM<br>MEETS<br><span>BUSAN.</span></h1></div><div class="report-cover-copy"><p class="report-kicker">2026 부산 덕질 관광 리서치</p><p>팬이 좋아하는 세계관은 어떻게 부산을 여행할 이유가 되는가. 도시형 팬덤 관광의 문제를 짚고, <strong>메이플스토리 in 롯데월드 부산</strong>을 숏폼 콘텐츠로 전환할 가능성을 탐색했습니다.</p><dl><div><dt>REGION</dt><dd>BUSAN</dd></div><div><dt>FOCUS</dt><dd>MAPLESTORY</dd></div><div><dt>UPDATED</dt><dd>2026.09.09</dd></div></dl></div></div></header>
 
-    <section class="section section--soft" aria-labelledby="resource-heading">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="section-title" id="resource-heading">Tourism<br>Resources</h2>
-          <p class="section-description">아래 내용은 구성 예시입니다. 실제 조사 자료가 준비되면 항목과 행을 자유롭게 추가할 수 있습니다.</p>
-        </div>
-        <div class="filter-list" data-filter-group data-filter-target=".resource-row" aria-label="관광 자원 지역 필터">
-          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">전체</button>
-          <button class="filter-button" type="button" data-filter="seoul" aria-pressed="false">서울</button>
-          <button class="filter-button" type="button" data-filter="busan" aria-pressed="false">부산</button>
-          <button class="filter-button" type="button" data-filter="jeju" aria-pressed="false">제주</button>
-        </div>
-        <div class="table-shell">
-          <table class="resource-table">
-            <thead><tr><th>NO.</th><th>관광 자원</th><th>지역</th><th>핵심 특징</th><th>주요 타깃</th><th>콘텐츠 아이디어</th></tr></thead>
-            <tbody>
-              <tr class="resource-row" data-category="seoul"><td>01</td><td><strong>도심 산책 코스</strong></td><td>서울</td><td>오래된 골목과 새로운 상점의 공존</td><td>20–30대 개별 여행자</td><td>하루 동안 걷는 로컬 큐레이션</td></tr>
-              <tr class="resource-row" data-category="busan"><td>02</td><td><strong>해안 마을 풍경</strong></td><td>부산</td><td>바다와 생활문화가 만드는 색감</td><td>사진·영상 관심 여행자</td><td>시간대별 영상 스케치</td></tr>
-              <tr class="resource-row" data-category="jeju"><td>03</td><td><strong>오름과 숲길</strong></td><td>제주</td><td>계절에 따라 변화하는 자연</td><td>웰니스 여행자</td><td>소리와 호흡 중심의 숏폼</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+    <nav class="report-local-nav" aria-label="리포트 섹션"><div class="container"><a href="#question">문제 정의</a><a href="#insight">조사 인사이트</a><a href="#case-study">메인 사례</a><a href="#route">관광 동선</a><a href="#shortform">숏폼 기획</a></div></nav>
 
-    <section class="section" aria-labelledby="insight-heading">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="section-title" id="insight-heading">Planning<br>Insights</h2>
-          <p class="section-description">리서치에서 발견한 핵심 포인트를 SNS 콘텐츠 기획 언어로 전환합니다.</p>
-        </div>
-        <div class="insight-grid">
-          <article class="insight-card"><span class="tag">PLACE</span><strong>장소보다 경험</strong><p>정보를 나열하기보다 여행자가 현장에서 느낄 장면과 감각을 중심으로 설계합니다.</p></article>
-          <article class="insight-card"><span class="tag">AUDIENCE</span><strong>선명한 타깃</strong><p>누구에게 필요한 콘텐츠인지 정의하고 타깃의 여행 동기와 채널 이용 방식을 반영합니다.</p></article>
-          <article class="insight-card"><span class="tag">FORMAT</span><strong>채널별 문법</strong><p>카드뉴스, 릴스, 숏폼 등 콘텐츠 형식에 맞는 호흡과 정보 밀도를 적용합니다.</p></article>
-        </div>
-      </div>
-    </section>
+    <section class="section" id="question"><div class="container"><div class="section-head"><h2 class="section-title">Why<br>Now?</h2><p class="section-description">부산에는 대형 행사와 매력적인 팬덤 거점이 있지만, 개별 이벤트를 ‘도시를 여행하는 경험’으로 연결하는 정보와 서사가 부족합니다.</p></div>
+      <div class="report-thesis"><p>“행사는 끝나도,<br><span>여행의 동기</span>는 남아야 한다.”</p><div><strong>Research Question</strong><p>팬의 관심을 행사장 방문에 그치지 않고 부산 체류와 지역 이동으로 확장하려면 어떤 콘텐츠가 필요한가?</p></div></div>
+      <div class="problem-grid"><article><span>01</span><h3>정보의 파편화</h3><p>행사 일정, 굿즈, 교통, 주변 관광지가 서로 다른 채널에 흩어져 한 번에 계획하기 어렵습니다.</p></article><article><span>02</span><h3>행사장 중심 소비</h3><p>팬의 이동이 행사장과 굿즈숍에 집중되어 주변 상권과 관광지로 충분히 확장되지 못합니다.</p></article><article><span>03</span><h3>짧은 행사 수명</h3><p>기간 한정 행사는 종료 후 검색 가치가 급격히 낮아지고 기록이 다음 관광으로 이어지지 않습니다.</p></article><article><span>04</span><h3>방문 전 불확실성</h3><p>대기, 품절, 혼잡, 이동시간 정보가 부족해 타지역 방문객의 계획 비용이 커집니다.</p></article></div>
+    </div></section>
+
+    <section class="section section--soft" id="insight"><div class="container"><div class="section-head"><h2 class="section-title">Research<br>Insights</h2><p class="section-description">게임·애니메이션·웹툰·K-Pop 행사 사례를 종합하면 팬덤 관광의 성패는 규모보다 ‘도시와 IP를 연결하는 방식’에 달려 있습니다.</p></div>
+      <div class="insight-matrix"><article><span>01 · MOVE</span><h3>도시 전체가 무대</h3><p>도시철도·해변·전시장·상권을 미션으로 연결하면 한 장소에 몰린 소비가 여러 권역으로 확장됩니다.</p></article><article><span>02 · ROLE</span><h3>팬에게 역할 부여</h3><p>방문객을 용사·트레이너·독자로 설정하고 기록과 보상을 제공하면 관광이 세계관 체험이 됩니다.</p></article><article><span>03 · STAY</span><h3>체류시간의 설계</h3><p>팝업, 야간경관, 숙박, 교통을 묶으면 한 번의 관람이 반나절에서 1박 2일 여행으로 늘어납니다.</p></article><article><span>04 · SHARE</span><h3>공유 가능한 장면</h3><p>숏폼은 장소 설명보다 ‘캐릭터를 만나는 순간, 미션을 완수하는 순간’을 먼저 보여줘야 합니다.</p></article></div>
+      <aside class="evidence-note"><div><span class="evidence-grade">B−</span><strong>조사 기준</strong></div><p>공식 발표, 방문객 수, 매진·품절, 현장 기사와 공개 SNS 반응을 우선 활용했습니다. 로그인 제한 플랫폼의 전체 댓글 감성이나 부산 행사 총방문객 수는 추정하지 않았습니다.</p></aside>
+    </div></section>
+
+    <section class="section maple-case" id="case-study"><div class="container"><div class="case-label"><span>MAIN CASE STUDY</span><span>2026.08.29—11.22</span></div><div class="maple-title"><div><p>게임 IP × 테마파크 × 부산 여행</p><h2>메이플스토리 in<br>롯데월드 부산</h2></div><span class="case-grade">B−</span></div>
+      <div class="maple-summary"><p>메이플스토리의 캐릭터와 마을을 테마파크 전체에 확장해, 팬에게는 게임 세계로 들어온 경험을, 가족 관광객에게는 퍼레이드와 체험형 나들이를 제공한 장기 IP 시즌입니다.</p><div class="case-facts"><div><small>LOCATION</small><strong>기장 · 오시리아</strong></div><div><small>FORMAT</small><strong>장기 테마파크형</strong></div><div><small>TARGET</small><strong>게임 팬 · 가족</strong></div></div></div>
+      <div class="experience-grid"><article><span>01</span><h3>세계관 공간</h3><p>메이플스토리 마을과 캐릭터 공간, 좀비버섯과 토벤머리 용사 포토존.</p></article><article><span>02</span><h3>부산 한정 퍼레이드</h3><p>부산점에서만 만나는 신규 퍼레이드와 핑크빈 등 캐릭터 포토타임.</p></article><article><span>03</span><h3>참여형 미션</h3><p>모바일 스탬프 랠리와 캐릭터 제작 체험으로 관람객을 플레이어로 전환.</p></article><article><span>04</span><h3>야간 확장</h3><p>‘좀비월드’를 함께 운영해 낮 방문을 야간 체류까지 이어지게 설계.</p></article></div>
+      <div class="signal-risk"><div><p class="mini-label">POSITIVE SIGNAL</p><h3>“캐릭터가 귀엽고<br>볼거리가 많다”</h3><p>공개 현장 콘텐츠에서 캐릭터, 퍼레이드, 포토존에 대한 긍정 평가가 확인됐고 넥슨·롯데의 오프라인 캠페인은 2026 올해의 브랜드 대상 캠페인 부문을 수상했습니다.</p><div class="keyword-row"><span>#핑크빈</span><span>#퍼레이드</span><span>#포토존</span><span>#메이플팬</span></div></div><div><p class="mini-label">DATA LIMIT</p><h3>성과를 읽을 때<br>주의할 점</h3><ul><li>일부 현장 SNS 콘텐츠는 광고 콘텐츠</li><li>부산 행사 자체의 총방문객 수 확인 불가</li><li>비광고 댓글의 전체 감성 비율 확인 불가</li><li>혼잡·대기·품절 정보의 실시간 안내 필요</li></ul></div></div>
+      <p class="source-line">SOURCE <a href="https://news.tf.co.kr/read/releasecopy/2354418.htm" target="_blank" rel="noopener">더팩트 — 행사 구성 ↗</a><a href="https://businessnews.chosun.com/site/data/html_dir/2026/09/07/2026090780070.html" target="_blank" rel="noopener">디지틀조선TV — 캠페인 수상 ↗</a></p>
+    </div></section>
+
+    <section class="section section--navy" id="route"><div class="container"><div class="section-head"><h2 class="section-title">1 Night<br>2 Days</h2><p class="section-description">테마파크 방문을 오시리아 해안 관광과 연결해 ‘하루 행사’를 ‘부산 여행’으로 확장합니다.</p></div><ol class="route-timeline"><li><span>DAY 1 · 11:00</span><div><h3>오시리아 도착</h3><p>부산역에서 동해선 이동 · 짐 보관 · 캐릭터 미션 시작</p></div></li><li><span>DAY 1 · 13:00</span><div><h3>롯데월드 부산</h3><p>마을 탐색 → 캐릭터 체험 → 퍼레이드 → 스탬프 랠리</p></div></li><li><span>DAY 1 · 19:00</span><div><h3>야간 콘텐츠</h3><p>좀비월드와 야간 포토존 후 오시리아·아난티 숙박</p></div></li><li><span>DAY 2 · 10:00</span><div><h3>부산의 실제 풍경</h3><p>해동용궁사 → 송정해수욕장 → 해안 카페 → 귀가</p></div></li></ol></div></section>
+
+    <section class="section" id="shortform"><div class="container"><div class="section-head"><h2 class="section-title">Short-form<br>Direction</h2><p class="section-description">조사 내용을 정보 나열이 아닌 30초의 발견과 이동 서사로 압축합니다.</p></div><div class="shortform-plan"><div class="phone-script"><div class="script-screen"><span>00:00—00:03</span><strong>“메이플 월드가<br>부산에 열렸다고?”</strong><p>퍼레이드의 가장 강한 장면으로 시작</p></div><div class="script-screen"><span>00:04—00:12</span><strong>캐릭터를 만나고<br>미션을 플레이</strong><p>포토존·스탬프·체험을 빠르게 교차</p></div><div class="script-screen"><span>00:13—00:22</span><strong>놀이공원 밖으로<br>여행 확장</strong><p>용궁사·송정 바다로 화면 전환</p></div><div class="script-screen"><span>00:23—00:30</span><strong>“용사님의 다음<br>부산 퀘스트는?”</strong><p>저장·공유를 유도하는 질문형 CTA</p></div></div><div class="planning-board"><div><span>CORE MESSAGE</span><h3>게임 속 모험이<br>부산 여행이 된다.</h3></div><dl><div><dt>TARGET</dt><dd>메이플스토리 팬, 캐릭터 선호 20–30대, 가족 여행객</dd></div><div><dt>TONE</dt><dd>발견의 설렘 · 귀여움 · 실제 방문에 도움 되는 정보</dd></div><div><dt>FORMAT</dt><dd>9:16 세로형 · 25–30초 · 자막 중심 · 빠른 장소 전환</dd></div><div><dt>ESSENTIAL</dt><dd>행사 기간, 위치, 이동시간, 대기·품절 확인 안내</dd></div></dl><div class="do-dont"><p><strong>DO</strong>캐릭터와 팬의 반응을 첫 장면에 배치하고 주변 코스를 한눈에 보여주기</p><p><strong>DON’T</strong>검증되지 않은 방문객 수나 광고성 반응을 일반 이용자 평가처럼 표현하기</p></div></div></div>
+      <div class="report-conclusion"><span>CONCLUSION</span><p>메이플스토리 in 롯데월드 부산의 핵심 가치는 단순한 캐릭터 전시가 아니라, <strong>팬이 용사가 되어 부산 동부권을 여행하게 만드는 출발점</strong>에 있습니다.</p></div>
+    </div></section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top"><p class="footer-title">Local stories,<br>new perspectives.</p><div class="footer-meta"><div><span class="footer-label">PROJECT</span><p>SK플래닛 관광 콘텐츠 아카이브</p></div><div><span class="footer-label">CREATOR</span><p>이름 또는 팀명을 입력하세요</p></div></div></div>
-      <div class="footer-bottom"><p>© <span data-current-year>2026</span> Tourism Content Archive.</p><p>Designed for SK Planet Project.</p></div>
-    </div>
-  </footer>
-</body>
-</html>
+  <footer class="site-footer"><div class="container"><div class="footer-top"><p class="footer-title">Local stories,<br>new perspectives.</p><div class="footer-meta"><div><span class="footer-label">PROJECT</span><p>SK플래닛 관광 콘텐츠 아카이브</p></div><div><span class="footer-label">RESEARCH</span><p>2026 부산 덕질 관광</p></div></div></div><div class="footer-bottom"><p>© <span data-current-year>2026</span> Tourism Content Archive.</p><p>Updated 2026.09.09.</p></div></div></footer>
+</body></html>

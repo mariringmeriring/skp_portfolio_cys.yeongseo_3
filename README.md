@@ -8,7 +8,9 @@ SK플래닛 관광 콘텐츠 제작 프로젝트의 조사, 제작물, SNS 분�
 - `brand.html`: NARU studio 브랜드 아이덴티티 및 CI 가이드
 - `report.html`: 관광 자원 조사 및 콘텐츠 기획 자료
 - `contents.html`: 카드뉴스 및 영상 아카이브
+- 카드뉴스 이미지: `assets/images/contents/naru-cardnews-01.jpg`부터 `03.jpg`까지 순서대로 표시
 - `sns.html`: SNS 성과 분석 대시보드
+- `spoton.html`: 스마트폰 프레임 안에서 실행되는 SPOT:ON 인터랙티브 서비스 미리보기
 - `final.html`: 팀 프로젝트 케이스 스터디
 
 ## 콘텐츠 수정

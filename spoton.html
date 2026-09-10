@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="부산 덕질 여행 코스를 설계하는 SPOT:ON 서비스를 스마트폰 화면에서 체험합니다.">
+  <meta name="theme-color" content="#a9d8f3">
+  <title>SPOT:ON · Tourism Content Archive</title>
+  <link rel="icon" href="assets/images/common/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">본문 바로가기</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Tourism Content Archive 홈"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text">TOURISM CONTENT ARCHIVE</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="메뉴 열기"><span class="menu-toggle-lines" aria-hidden="true"></span></button>
+      <nav class="site-nav" id="site-navigation" aria-label="주요 메뉴">
+        <ul>
+          <li><a href="brand.html">BRAND</a></li>
+          <li><a href="report.html">REPORT</a></li>
+          <li><a href="contents.html">CONTENTS</a></li>
+          <li><a href="sns.html">SNS</a></li>
+          <li><a href="spoton.html" aria-current="page">SPOT:ON</a></li>
+          <li><a href="final.html">FINAL PROJECT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="spoton-page">
+    <header class="page-header spoton-page-header">
+      <div class="container spoton-intro-grid">
+        <div>
+          <p class="eyebrow">04 · Interactive Service</p>
+          <h1 class="page-title">SPOT:ON<span class="accent">.</span></h1>
+          <p class="page-intro">부산의 덕질 명소와 실시간 정보를 바탕으로 제한된 시간 안에 방문할 수 있는 여행 코스를 설계하는 인터랙티브 서비스입니다.</p>
+        </div>
+        <div class="spoton-intro-aside">
+          <span class="spoton-live"><i aria-hidden="true"></i> LIVE SERVICE</span>
+          <p>아래 스마트폰 화면에서 실제 서비스를 스크롤하고 직접 조작해 보세요.</p>
+          <a class="button" href="https://appservice-test2-3a5n.vercel.app/" target="_blank" rel="noopener noreferrer">전체 화면으로 열기</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="spoton-demo" aria-labelledby="spoton-preview-heading">
+      <div class="container spoton-demo-grid">
+        <div class="spoton-demo-copy">
+          <p class="eyebrow">Mobile Preview</p>
+          <h2 class="section-title" id="spoton-preview-heading">Plan your<br>fandom trip.</h2>
+          <p>출발지와 복귀 시간을 기준으로 지금 방문할 수 있는 장소를 탐색하고, 추천 코스와 실시간 스팟 정보를 확인할 수 있습니다.</p>
+          <ul class="spoton-feature-list">
+            <li><span>01</span><strong>초고속 AI 코스 설계</strong></li>
+            <li><span>02</span><strong>실시간 스팟 검증</strong></li>
+            <li><span>03</span><strong>복귀 시간 중심 동선</strong></li>
+          </ul>
+          <div class="spoton-controls" aria-label="미리보기 제어">
+            <button type="button" class="preview-control" data-preview-reload><span aria-hidden="true">↻</span> 다시 불러오기</button>
+            <button type="button" class="preview-control" data-preview-fullscreen><span aria-hidden="true">⛶</span> 크게 보기</button>
+          </div>
+        </div>
+
+        <div class="phone-stage">
+          <div class="phone-shell" data-phone-preview>
+            <span class="phone-side-button phone-side-button--top" aria-hidden="true"></span>
+            <span class="phone-side-button phone-side-button--middle" aria-hidden="true"></span>
+            <span class="phone-side-button phone-side-button--bottom" aria-hidden="true"></span>
+            <div class="phone-screen">
+              <div class="phone-island" aria-hidden="true"></div>
+              <div class="preview-loading" data-preview-loading role="status"><span></span><p>SPOT:ON을 불러오는 중입니다.</p></div>
+              <iframe id="spoton-preview" src="https://appservice-test2-3a5n.vercel.app/" title="SPOT:ON 덕질 여행 코스 플래너 실제 서비스" loading="eager" allow="geolocation; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+              <div class="phone-home-indicator" aria-hidden="true"></div>
+            </div>
+          </div>
+          <p class="phone-caption">390 × 844 MOBILE VIEW · 실제 서비스가 연결되어 있습니다.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top"><p class="footer-title">Local stories,<br>new perspectives.</p><div class="footer-meta"><div><span class="footer-label">PROJECT</span><p>SK플래닛 관광 콘텐츠 아카이브</p></div><div><span class="footer-label">SERVICE</span><p>SPOT:ON</p></div></div></div>
+      <div class="footer-bottom"><p>© <span data-current-year>2026</span> Tourism Content Archive.</p><p>Designed for SK Planet Project.</p></div>
+    </div>
+  </footer>
+</body>
+</html>
