@@ -1613,3 +1613,53 @@
   font-variant-ligatures: none;
   font-feature-settings: "kern" 0, "liga" 0, "clig" 0;
 }
+
+/* Responsive overflow safeguards for dense editorial layouts. */
+.archive-grid > *,
+.insight-grid > *,
+.project-facts > *,
+.content-grid > *,
+.metric-grid > *,
+.dashboard-grid > *,
+.spoton-intro-grid > *,
+.spoton-demo-grid > *,
+.report-cover-grid > *,
+.problem-grid > *,
+.insight-matrix > *,
+.experience-grid > *,
+.shortform-plan > *,
+.brand-intro-grid > *,
+.character-hero > *,
+.rules-grid > *,
+.dont-grid > *,
+.background-grid > * {
+  min-width: 0;
+}
+
+.hero-title,
+.archive-name,
+.project-visual-title,
+.brand-guide-title h1,
+.character-copy h2,
+.maple-title h2,
+.planning-board h3 {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.guide-section-heading h2,
+.rank-name,
+.planning-board dd,
+.character-profile dd {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.guide-section-heading span:last-child {
+  margin-left: auto;
+  text-align: right;
+}
+
+.ranking-list li > strong {
+  white-space: nowrap;
+}

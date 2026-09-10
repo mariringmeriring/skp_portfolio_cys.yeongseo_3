@@ -192,6 +192,7 @@ body.menu-open {
   font-weight: 700;
   letter-spacing: -0.065em;
   line-height: 0.94;
+  overflow-wrap: break-word;
 }
 
 .page-title .accent {
@@ -227,6 +228,15 @@ body.menu-open {
   font-weight: 700;
   letter-spacing: -0.05em;
   line-height: 1.05;
+  overflow-wrap: break-word;
+}
+
+.hero-grid > *,
+.section-head > *,
+.footer-top > *,
+.footer-meta > *,
+.header-inner > * {
+  min-width: 0;
 }
 
 .section-description {

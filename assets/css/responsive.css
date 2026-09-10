@@ -61,6 +61,30 @@
   }
 }
 
+@media (max-width: 900px) {
+  .report-cover-grid,
+  .shortform-plan,
+  .character-hero,
+  .rules-grid,
+  .spoton-demo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spoton-demo-copy,
+  .character-copy {
+    max-width: 620px;
+  }
+
+  .phone-stage {
+    margin-top: 20px;
+  }
+
+  .process-list li {
+    grid-template-columns: 58px minmax(150px, 0.65fr) minmax(0, 1fr);
+    gap: 20px;
+  }
+}
+
 @media (max-width: 767px) {
   .report-cover-grid,
   .report-thesis,
@@ -152,7 +176,8 @@
   }
 
   .hero-title {
-    font-size: clamp(58px, 20vw, 92px);
+    font-size: clamp(48px, 17vw, 78px);
+    line-height: 0.9;
   }
 
   .hero-index {
@@ -160,7 +185,23 @@
   }
 
   .page-title {
-    font-size: clamp(46px, 16vw, 72px);
+    font-size: clamp(42px, 13.5vw, 64px);
+    line-height: 1;
+  }
+
+  .section-title {
+    font-size: clamp(30px, 11vw, 48px);
+  }
+
+  .eyebrow {
+    align-items: flex-start;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .eyebrow::before {
+    flex: 0 0 22px;
+    margin-top: 0.65em;
   }
 
   .section-head {
@@ -292,7 +333,9 @@
   }
 
   .project-visual-title {
-    max-width: 90%;
+    max-width: 100%;
+    font-size: clamp(42px, 15vw, 72px);
+    line-height: 0.96;
   }
 
   .spoton-intro-grid,
@@ -354,5 +397,63 @@
 
   .empty-note {
     padding: 36px 22px;
+  }
+
+  .palette-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-section-heading {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .guide-section-heading span:last-child {
+    width: 100%;
+    padding-left: 38px;
+  }
+
+  .minimum-size-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-block: 22px;
+  }
+
+  .minimum-size-row i {
+    width: 70%;
+    height: 1px;
+    margin-inline: auto;
+  }
+
+  .character-profile div,
+  .planning-board dl > div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .case-label,
+  .maple-title,
+  .panel-head {
+    flex-wrap: wrap;
+  }
+
+  .maple-title h2 {
+    font-size: clamp(34px, 11vw, 46px);
+  }
+
+  .archive-name {
+    font-size: clamp(30px, 12vw, 46px);
+  }
+
+  .spoton-intro-aside {
+    padding: 22px;
+  }
+
+  .spoton-controls {
+    display: grid;
+  }
+
+  .preview-control {
+    justify-content: center;
   }
 }
