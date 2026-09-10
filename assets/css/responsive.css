@@ -29,7 +29,7 @@
   }
 
   .hero-content-backdrop {
-    width: min(60vw, 560px);
+    width: min(52vw, 520px);
   }
 
   .content-grid,
@@ -70,7 +70,10 @@
   .evidence-note,
   .report-conclusion { grid-template-columns: 1fr; }
 
-  .report-cover h1 { font-size: clamp(64px, 22vw, 96px); }
+  .report-cover h1 {
+    font-size: clamp(48px, 15vw, 72px);
+    line-height: 0.94;
+  }
   .report-cover-copy dl,
   .case-facts { grid-template-columns: 1fr; }
   .problem-grid,
@@ -136,14 +139,14 @@
   }
 
   .hero::after {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.68) 48%, var(--color-white) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.86) 48%, var(--color-white) 100%);
   }
 
   .hero-content-backdrop {
     top: 24px;
     right: -12vw;
     bottom: 18%;
-    width: 88vw;
+    width: 78vw;
     border-radius: 32px 0 0 32px;
     transform: rotate(2deg);
   }
