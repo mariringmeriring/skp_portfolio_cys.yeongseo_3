@@ -1,4 +1,10 @@
 @media (max-width: 1023px) {
+  .problem-grid,
+  .insight-matrix,
+  .experience-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .report-cover-grid,
+  .shortform-plan { grid-template-columns: 1fr 1fr; }
   .brand-text {
     max-width: 190px;
     overflow: hidden;
@@ -52,6 +58,28 @@
 }
 
 @media (max-width: 767px) {
+  .report-cover-grid,
+  .report-thesis,
+  .maple-summary,
+  .signal-risk,
+  .shortform-plan,
+  .evidence-note,
+  .report-conclusion { grid-template-columns: 1fr; }
+
+  .report-cover h1 { font-size: clamp(64px, 22vw, 96px); }
+  .report-cover-copy dl,
+  .case-facts { grid-template-columns: 1fr; }
+  .problem-grid,
+  .insight-matrix,
+  .experience-grid { grid-template-columns: 1fr; }
+  .problem-grid article,
+  .insight-matrix article,
+  .experience-grid article { min-height: 205px; }
+  .report-local-nav .container { padding-inline: 0; }
+  .route-timeline li { grid-template-columns: 1fr; gap: 8px; }
+  .do-dont { grid-template-columns: 1fr; }
+  .maple-title { padding-block: 36px; }
+  .script-screen { min-height: 180px; }
   body {
     font-size: 15px;
   }
