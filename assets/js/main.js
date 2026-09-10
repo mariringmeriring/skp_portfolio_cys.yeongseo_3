@@ -61,6 +61,41 @@ filterGroups.forEach((group) => {
 const yearElement = document.querySelector("[data-current-year]");
 if (yearElement) yearElement.textContent = new Date().getFullYear();
 
+const brandTabs = [...document.querySelectorAll("[data-brand-tab]")];
+const brandPanels = [...document.querySelectorAll("[data-brand-panel]")];
+
+if (brandTabs.length && brandPanels.length) {
+  const selectBrandTab = (nextTab) => {
+    const selectedKey = nextTab.dataset.brandTab;
+
+    brandTabs.forEach((tab) => {
+      const isSelected = tab === nextTab;
+      tab.classList.toggle("is-active", isSelected);
+      tab.setAttribute("aria-selected", String(isSelected));
+      tab.tabIndex = isSelected ? 0 : -1;
+    });
+
+    brandPanels.forEach((panel) => {
+      panel.hidden = panel.dataset.brandPanel !== selectedKey;
+    });
+  };
+
+  brandTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => selectBrandTab(tab));
+    tab.addEventListener("keydown", (event) => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      let nextIndex = index;
+      if (event.key === 'ArrowLeft') nextIndex = (index - 1 + brandTabs.length) % brandTabs.length;
+      if (event.key === 'ArrowRight') nextIndex = (index + 1) % brandTabs.length;
+      if (event.key === 'Home') nextIndex = 0;
+      if (event.key === 'End') nextIndex = brandTabs.length - 1;
+      selectBrandTab(brandTabs[nextIndex]);
+      brandTabs[nextIndex].focus();
+    });
+  });
+}
+
 const carousels = document.querySelectorAll("[data-carousel]");
 
 carousels.forEach((carousel) => {

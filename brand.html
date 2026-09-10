@@ -50,6 +50,17 @@
         <p>NARU studio CI 가이드라인 및 로고 사용 규정</p>
       </header>
 
+      <nav class="brand-tabs" role="tablist" aria-label="브랜드 가이드 분류">
+        <button class="brand-tab is-active" id="brand-tab-ci" type="button" role="tab" aria-selected="true" aria-controls="brand-panel-ci" tabindex="0" data-brand-tab="ci">
+          <span>01</span> CI
+        </button>
+        <button class="brand-tab" id="brand-tab-character" type="button" role="tab" aria-selected="false" aria-controls="brand-panel-character" tabindex="-1" data-brand-tab="character">
+          <span>02</span> CHARACTER
+        </button>
+      </nav>
+
+      <div class="brand-tab-panel" id="brand-panel-ci" role="tabpanel" aria-labelledby="brand-tab-ci" data-brand-panel="ci">
+
       <section class="guide-section" aria-labelledby="primary-logo-heading">
         <div class="guide-section-heading"><span class="guide-number">01</span><h2 id="primary-logo-heading">주요 로고</h2><span>PRIMARY LOGO</span></div>
         <div class="brand-intro-grid">
@@ -112,6 +123,38 @@
           <article class="background-card background-card--pastel"><img src="assets/images/common/naru-logo.png" alt="파스텔 블루 배경 위 NARU studio 로고"><strong>On Pastel Blue Background</strong><span>네이비 대비 로고</span></article>
         </div>
       </section>
+      </div>
+
+      <div class="brand-tab-panel" id="brand-panel-character" role="tabpanel" aria-labelledby="brand-tab-character" data-brand-panel="character" hidden>
+        <section class="character-hero" aria-labelledby="character-heading">
+          <div class="character-portrait">
+            <span class="character-portrait-label">NARU STUDIO · OFFICIAL CHARACTER</span>
+            <img src="assets/images/brand/naru-character.png" alt="하늘색 머리와 세일러복을 입은 NARU 캐릭터">
+          </div>
+          <div class="character-copy">
+            <span class="character-eyebrow">MEET OUR CHARACTER</span>
+            <h2 id="character-heading">NARU</h2>
+            <p>부산의 반짝이는 취향과 이야기를 찾아 나서는 호기심 많은 안내자.<br>파도처럼 가볍게 다가와 새로운 즐거움과 사람을 이어줍니다.</p>
+            <dl class="character-profile">
+              <div><dt>NAME</dt><dd>NARU</dd></div>
+              <div><dt>KEY COLOR</dt><dd><i aria-hidden="true"></i> NARU BLUE</dd></div>
+              <div><dt>PERSONALITY</dt><dd>CURIOUS · FRIENDLY</dd></div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="guide-section character-turnaround" aria-labelledby="turnaround-heading">
+          <div class="guide-section-heading"><span class="guide-number">01</span><h2 id="turnaround-heading">캐릭터 삼면도</h2><span>CHARACTER TURNAROUND</span></div>
+          <div class="turnaround-placeholder" aria-label="NARU 캐릭터 삼면도 이미지 준비 영역">
+            <div class="turnaround-slots" aria-hidden="true">
+              <span><i></i><b>FRONT</b></span>
+              <span><i></i><b>SIDE</b></span>
+              <span><i></i><b>BACK</b></span>
+            </div>
+            <p><strong>CHARACTER TURNAROUND</strong><br>정면 · 측면 · 후면 삼면도 이미지가 이곳에 추가됩니다.</p>
+          </div>
+        </section>
+      </div>
     </div>
   </main>
 
