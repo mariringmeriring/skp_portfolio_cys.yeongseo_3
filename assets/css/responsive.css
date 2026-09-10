@@ -28,6 +28,10 @@
     max-width: 520px;
   }
 
+  .hero-content-backdrop {
+    width: min(60vw, 560px);
+  }
+
   .content-grid,
   .insight-grid,
   .project-facts {
@@ -129,6 +133,19 @@
   .hero {
     min-height: calc(100svh - 68px);
     align-items: center;
+  }
+
+  .hero::after {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.68) 48%, var(--color-white) 100%);
+  }
+
+  .hero-content-backdrop {
+    top: 24px;
+    right: -12vw;
+    bottom: 18%;
+    width: 88vw;
+    border-radius: 32px 0 0 32px;
+    transform: rotate(2deg);
   }
 
   .hero-title {

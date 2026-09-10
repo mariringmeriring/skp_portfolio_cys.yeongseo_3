@@ -61,6 +61,49 @@ filterGroups.forEach((group) => {
 const yearElement = document.querySelector("[data-current-year]");
 if (yearElement) yearElement.textContent = new Date().getFullYear();
 
+const heroBackdrop = document.querySelector("[data-hero-backdrop]");
+
+if (heroBackdrop) {
+  const images = [...heroBackdrop.querySelectorAll(".hero-backdrop-image")];
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let activeIndex = Math.floor(Math.random() * images.length);
+  let rotationTimer;
+
+  images.forEach((image, index) => {
+    image.classList.toggle("is-active", index === activeIndex);
+  });
+
+  const showRandomImage = () => {
+    if (images.length < 2) return;
+
+    let nextIndex = activeIndex;
+    while (nextIndex === activeIndex) {
+      nextIndex = Math.floor(Math.random() * images.length);
+    }
+
+    images[activeIndex].classList.remove("is-active");
+    images[nextIndex].classList.add("is-active");
+    activeIndex = nextIndex;
+  };
+
+  const startRotation = () => {
+    if (reduceMotion || images.length < 2 || rotationTimer) return;
+    rotationTimer = window.setInterval(showRandomImage, 4500);
+  };
+
+  const stopRotation = () => {
+    window.clearInterval(rotationTimer);
+    rotationTimer = undefined;
+  };
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stopRotation();
+    else startRotation();
+  });
+
+  startRotation();
+}
+
 const brandTabs = [...document.querySelectorAll("[data-brand-tab]")];
 const brandPanels = [...document.querySelectorAll("[data-brand-panel]")];
 
