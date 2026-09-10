@@ -349,3 +349,14 @@ body.menu-open {
   font-size: 13px;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
+
+/* KBL Jump has wide glyphs and tall visual bounds; Inter's tight tracking causes collisions. */
+.page-title,
+.section-title,
+.footer-title {
+  letter-spacing: 0.01em;
+  line-height: 1.14;
+  font-kerning: none;
+  font-variant-ligatures: none;
+  font-feature-settings: "kern" 0, "liga" 0, "clig" 0;
+}

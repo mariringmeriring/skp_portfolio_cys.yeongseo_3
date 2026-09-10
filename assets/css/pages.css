@@ -1480,4 +1480,20 @@
 .planning-board h3,
 .brand-guide-title h1 {
   font-family: var(--font-impact);
+  letter-spacing: 0.01em;
+  line-height: 1.14;
+  font-kerning: none;
+  font-variant-ligatures: none;
+  font-feature-settings: "kern" 0, "liga" 0, "clig" 0;
+}
+
+.hero-title,
+.banner-copy,
+.archive-name,
+.project-visual-title {
+  letter-spacing: 0.01em;
+  line-height: 1.12;
+  font-kerning: none;
+  font-variant-ligatures: none;
+  font-feature-settings: "kern" 0, "liga" 0, "clig" 0;
 }
