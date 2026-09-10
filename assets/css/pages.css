@@ -1209,10 +1209,10 @@
   padding-bottom: clamp(76px, 10vw, 132px);
 }
 
-.character-portrait { position: relative; overflow: hidden; min-height: 600px; background: #f8f5f1; border-radius: var(--radius-md); }
+.character-portrait { position: relative; overflow: hidden; width: 100%; aspect-ratio: 1; background: #f8f5f1; border-radius: var(--radius-md); }
 .character-portrait::after { position: absolute; right: -12%; bottom: -24%; width: 58%; aspect-ratio: 1; content: ""; border: 1px solid rgba(99,179,223,.34); border-radius: 50%; }
-.character-portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 46%; }
-.character-portrait-label { position: absolute; top: 24px; left: 24px; z-index: 1; padding: 8px 11px; color: var(--color-ink); background: rgba(255,255,255,.78); font-family: var(--font-display); font-size: 10px; font-weight: 800; letter-spacing: .08em; backdrop-filter: blur(8px); }
+.character-portrait img { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; padding: clamp(24px, 4vw, 58px); object-fit: contain; object-position: center; }
+.character-portrait-label { position: absolute; top: 24px; left: 24px; z-index: 2; padding: 8px 11px; color: var(--color-ink); background: rgba(255,255,255,.78); font-family: var(--font-display); font-size: 10px; font-weight: 800; letter-spacing: .08em; backdrop-filter: blur(8px); }
 .character-eyebrow { color: var(--color-support); font-family: var(--font-display); font-size: 11px; font-weight: 800; letter-spacing: .12em; }
 .character-copy h2 { margin: 16px 0 28px; font-family: var(--font-impact); font-size: clamp(70px, 10vw, 140px); letter-spacing: .01em; line-height: .85; }
 .character-copy > p { color: var(--color-muted); font-size: clamp(16px, 1.5vw, 19px); line-height: 1.9; }
@@ -1229,6 +1229,8 @@
 .turnaround-slots span:last-child { border-right: 0; }
 .turnaround-slots i { width: 70%; max-width: 150px; height: 64%; border: 1px dashed var(--color-support); border-radius: 46% 46% 36% 36%; }
 .turnaround-slots b { padding-bottom: 16px; color: var(--color-support); font-family: var(--font-display); font-size: 10px; letter-spacing: .12em; }
+.turnaround-image { overflow: hidden; width: 100%; aspect-ratio: 2 / 1; background: #fff; border: 1px solid var(--color-line); border-radius: var(--radius-md); }
+.turnaround-image img { display: block; width: 100%; height: 100%; padding: clamp(12px, 2vw, 30px); object-fit: contain; object-position: center; }
 
 .brand-guide-meta {
   display: flex;
