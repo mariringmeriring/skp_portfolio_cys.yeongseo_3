@@ -456,4 +456,18 @@
   .preview-control {
     justify-content: center;
   }
+
+  .hero-title {
+    font-size: clamp(44px, 13vw, 62px);
+    line-height: 1.12;
+  }
+
+  .archive-link:nth-child(2) .archive-name {
+    font-size: clamp(28px, 9vw, 38px);
+  }
+
+  .character-copy h2 {
+    font-size: clamp(52px, 16vw, 72px);
+    line-height: 1;
+  }
 }
