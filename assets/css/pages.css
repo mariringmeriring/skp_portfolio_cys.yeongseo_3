@@ -73,7 +73,7 @@
 .hero-title {
   position: relative;
   font-family: var(--font-impact);
-  font-size: clamp(58px, 8vw, 126px);
+  font-size: var(--type-hero);
   font-weight: 700;
   letter-spacing: -0.075em;
   line-height: 0.82;
@@ -159,7 +159,7 @@
 .banner-copy {
   max-width: 760px;
   font-family: var(--font-impact);
-  font-size: clamp(32px, 5.5vw, 78px);
+  font-size: clamp(36px, 4.8vw, 68px);
   font-weight: 600;
   letter-spacing: -0.055em;
   line-height: 1;
@@ -203,7 +203,7 @@
   bottom: clamp(26px, 4vw, 50px);
   left: clamp(26px, 4vw, 50px);
   font-family: var(--font-impact);
-  font-size: clamp(34px, 5vw, 68px);
+  font-size: clamp(32px, 3.8vw, 54px);
   font-weight: 700;
   letter-spacing: -0.055em;
   line-height: 1;
@@ -325,7 +325,7 @@
 .cardnews-gallery-head h3 {
   margin-bottom: 6px;
   font-family: var(--font-impact);
-  font-size: clamp(28px, 3.6vw, 48px);
+  font-size: var(--type-card);
   letter-spacing: -0.05em;
 }
 
@@ -465,7 +465,7 @@
 
 .content-subhead h3 {
   font-family: var(--font-display);
-  font-size: clamp(26px, 3vw, 38px);
+  font-size: clamp(24px, 2.5vw, 34px);
   letter-spacing: -0.04em;
 }
 
@@ -564,7 +564,7 @@
   display: block;
   margin: 18px 0 8px;
   font-family: var(--font-display);
-  font-size: clamp(32px, 4vw, 52px);
+  font-size: clamp(30px, 3.4vw, 46px);
   font-weight: 700;
   letter-spacing: -0.055em;
   line-height: 1;
@@ -702,7 +702,7 @@
   align-self: end;
   max-width: 700px;
   font-family: var(--font-impact);
-  font-size: clamp(44px, 7vw, 100px);
+  font-size: var(--type-page);
   font-weight: 700;
   letter-spacing: -0.07em;
   line-height: 0.9;
@@ -1167,7 +1167,7 @@
 
 .report-cover h1 {
   max-width: 100%;
-  font-size: clamp(52px, 6.8vw, 96px);
+  font-size: var(--type-feature);
   letter-spacing: -0.06em;
   line-height: 0.9;
   white-space: nowrap;
@@ -1216,7 +1216,7 @@
 .character-portrait img { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; padding: clamp(24px, 4vw, 58px); object-fit: contain; object-position: center; }
 .character-portrait-label { position: absolute; top: 24px; left: 24px; z-index: 2; padding: 8px 11px; color: var(--color-ink); background: rgba(255,255,255,.78); font-family: var(--font-display); font-size: 10px; font-weight: 800; letter-spacing: .08em; backdrop-filter: blur(8px); }
 .character-eyebrow { color: var(--color-support); font-family: var(--font-display); font-size: 11px; font-weight: 800; letter-spacing: .12em; }
-.character-copy h2 { margin: 16px 0 28px; font-family: var(--font-impact); font-size: clamp(60px, 7vw, 104px); letter-spacing: .01em; line-height: .95; white-space: nowrap; }
+.character-copy h2 { margin: 16px 0 28px; font-family: var(--font-impact); font-size: var(--type-feature); letter-spacing: .01em; line-height: .95; white-space: nowrap; }
 .character-copy > p { color: var(--color-muted); font-size: clamp(16px, 1.5vw, 19px); line-height: 1.9; }
 .character-profile { margin-top: 46px; border-top: 1px solid var(--color-ink); }
 .character-profile div { display: grid; grid-template-columns: 120px 1fr; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--color-line); }
@@ -1658,9 +1658,27 @@
 }
 
 .archive-link:nth-child(2) .archive-name {
-  font-size: clamp(32px, 4vw, 54px);
+  font-size: clamp(32px, 3.8vw, 54px);
   overflow-wrap: normal;
   white-space: nowrap;
+}
+
+/* Harmonize feature headings around the same scale as the corrected display words. */
+.brand-guide-title h1 {
+  font-size: clamp(40px, 4.8vw, 68px);
+}
+
+.maple-title h2 {
+  font-size: clamp(40px, 5.5vw, 78px);
+}
+
+.planning-board h3 {
+  font-size: clamp(32px, 4vw, 56px);
+}
+
+.signal-risk h3,
+.route-timeline h3 {
+  font-size: var(--type-card);
 }
 
 .guide-section-heading h2,

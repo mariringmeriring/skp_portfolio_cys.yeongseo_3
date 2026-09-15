@@ -22,6 +22,11 @@
   --font-sans: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
   --font-display: Inter, "Helvetica Neue", var(--font-sans);
   --font-impact: "KBL Jump Extended", var(--font-display);
+  --type-hero: clamp(56px, 8vw, 126px);
+  --type-feature: clamp(48px, 6.4vw, 96px);
+  --type-page: clamp(42px, 5.8vw, 86px);
+  --type-section: clamp(28px, 3.4vw, 46px);
+  --type-card: clamp(24px, 2.8vw, 38px);
   --container: 1240px;
   --gutter: clamp(20px, 4vw, 56px);
   --section-space: clamp(76px, 10vw, 144px);

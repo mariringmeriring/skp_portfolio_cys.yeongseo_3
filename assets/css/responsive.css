@@ -185,7 +185,7 @@
   }
 
   .page-title {
-    font-size: clamp(42px, 13.5vw, 64px);
+    font-size: clamp(40px, 12vw, 58px);
     line-height: 1;
   }
 
