@@ -358,6 +358,19 @@
   line-height: 1.04;
 }
 
+.poster-title-primary,
+.poster-title-secondary {
+  display: block;
+}
+
+.poster-title-secondary {
+  margin-top: 0.15em;
+  font-size: clamp(15px, 2vw, 30px);
+  letter-spacing: 0.015em;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
 .poster-summary {
   max-width: 680px;
   margin-top: 20px;
