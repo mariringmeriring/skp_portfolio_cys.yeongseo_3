@@ -304,33 +304,37 @@
 
 .tourism-poster {
   display: grid;
-  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
-  overflow: hidden;
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(32px, 5vw, 72px);
+  padding: clamp(26px, 4vw, 54px);
   color: var(--color-white);
   background: var(--color-ink);
   border-radius: var(--radius-lg);
 }
 
 .tourism-poster-visual {
+  align-self: start;
   min-width: 0;
   margin: 0;
   background: #087bc5;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
 }
 
 .tourism-poster-visual img {
   width: 100%;
-  height: 100%;
-  min-height: 720px;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
+  max-height: 540px;
+  object-fit: contain;
 }
 
 .tourism-poster-copy {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: clamp(40px, 6vw, 76px);
-  padding: clamp(30px, 5vw, 66px);
+  gap: clamp(28px, 4vw, 48px);
+  padding: 4px 0;
 }
 
 .tourism-poster-heading .tag {
@@ -356,10 +360,10 @@
 
 .poster-summary {
   max-width: 680px;
-  margin-top: 24px;
+  margin-top: 20px;
   color: rgba(250, 252, 253, 0.7);
   font-size: 14px;
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
 .poster-summary strong {
@@ -371,36 +375,36 @@
 }
 
 .poster-brief > div {
-  display: grid;
-  grid-template-columns: 112px minmax(0, 1fr);
-  gap: 20px;
-  padding: 15px 0;
+  display: block;
+  padding: 18px 0;
   border-bottom: 1px solid rgba(250, 252, 253, 0.12);
 }
 
 .poster-brief dt {
-  color: var(--color-brand-main);
-  font-family: var(--font-display);
-  font-size: 10px;
+  color: var(--color-white);
+  font-size: 14px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: -0.01em;
+  line-height: 1.45;
 }
 
 .poster-brief dd {
+  margin: 7px 0 0;
   color: rgba(250, 252, 253, 0.78);
-  font-size: 12px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.8;
 }
 
 .poster-brief .poster-message {
-  padding-top: 22px;
+  padding-top: 20px;
 }
 
 .poster-message dd {
+  margin-top: 10px;
   color: var(--color-white);
   font-family: var(--font-impact);
   font-size: clamp(22px, 2.4vw, 34px);
-  line-height: 1.2;
+  line-height: 1.35;
 }
 
 .cardnews-gallery {
