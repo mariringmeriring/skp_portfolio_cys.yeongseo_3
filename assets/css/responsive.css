@@ -1,4 +1,6 @@
 @media (max-width: 1023px) {
+  .bic-metric-grid,
+  .bic-strategy-grid { grid-template-columns: repeat(2, 1fr); }
   .problem-grid,
   .insight-matrix,
   .experience-grid { grid-template-columns: repeat(2, 1fr); }
@@ -95,6 +97,21 @@
 }
 
 @media (max-width: 767px) {
+  .report-hub { min-height: auto; }
+  .report-chooser,
+  .bic-split-grid,
+  .bic-award-grid,
+  .bic-case-note { grid-template-columns: 1fr; }
+  .report-choice { min-height: 260px; }
+  .report-switcher .container { grid-template-columns: 1fr auto; gap: 4px 14px; padding-block: 8px; }
+  .report-switcher span { grid-column: 1; text-align: left; }
+  .report-switcher strong { grid-column: 1 / -1; }
+  .report-switcher button:last-child { grid-column: 2; grid-row: 1 / span 2; }
+  .bic-metric-grid,
+  .bic-strategy-grid { grid-template-columns: 1fr; }
+  .bic-facts-strip { align-items: flex-start; flex-direction: column; gap: 14px; }
+  .bic-measure-list > div,
+  .bic-disclaimer { grid-template-columns: 1fr; gap: 8px; }
   .tourism-poster {
     grid-template-columns: 1fr;
     gap: 0;

@@ -61,6 +61,31 @@ filterGroups.forEach((group) => {
 const yearElement = document.querySelector("[data-current-year]");
 if (yearElement) yearElement.textContent = new Date().getFullYear();
 
+const reportHub = document.querySelector("[data-report-hub]");
+const reportWorkspaces = [...document.querySelectorAll("[data-report-workspace]")];
+const reportOpenButtons = [...document.querySelectorAll("[data-report-open]")];
+const reportBackButtons = [...document.querySelectorAll("[data-report-back]")];
+
+if (reportHub && reportWorkspaces.length) {
+  const showHub = () => {
+    reportHub.hidden = false;
+    reportWorkspaces.forEach((workspace) => { workspace.hidden = true; });
+    window.scrollTo({ top: 0, behavior: "auto" });
+  };
+
+  const openReport = (key) => {
+    const workspace = reportWorkspaces.find((item) => item.dataset.reportWorkspace === key);
+    if (!workspace) return;
+    reportHub.hidden = true;
+    reportWorkspaces.forEach((item) => { item.hidden = item !== workspace; });
+    window.scrollTo({ top: 0, behavior: "auto" });
+    workspace.querySelector("h1")?.focus?.();
+  };
+
+  reportOpenButtons.forEach((button) => button.addEventListener("click", () => openReport(button.dataset.reportOpen)));
+  reportBackButtons.forEach((button) => button.addEventListener("click", showHub));
+}
+
 const heroBackdrop = document.querySelector("[data-hero-backdrop]");
 
 if (heroBackdrop) {
