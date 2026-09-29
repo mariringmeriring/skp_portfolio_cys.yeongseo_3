@@ -322,7 +322,9 @@
   box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
 }
 
-.tourism-poster-visual img {
+.tourism-poster-visual img,
+.tourism-poster-visual video {
+  display: block;
   width: 100%;
   height: auto;
   max-height: 540px;

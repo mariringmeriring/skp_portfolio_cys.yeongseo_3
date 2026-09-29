@@ -69,7 +69,8 @@
     gap: 28px;
   }
 
-  .tourism-poster-visual img {
+  .tourism-poster-visual img,
+  .tourism-poster-visual video {
     max-height: 450px;
   }
 
@@ -123,7 +124,8 @@
     margin: clamp(24px, 6vw, 38px) auto 0;
   }
 
-  .tourism-poster-visual img {
+  .tourism-poster-visual img,
+  .tourism-poster-visual video {
     height: auto;
     object-fit: contain;
   }
