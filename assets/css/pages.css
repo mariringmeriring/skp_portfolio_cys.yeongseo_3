@@ -607,6 +607,26 @@
   border-radius: var(--radius-md);
 }
 
+.shortform-video-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 390px);
+}
+
+.content-thumb--video {
+  aspect-ratio: 1080 / 1934;
+  background: #0a0d12;
+}
+
+.content-thumb--video::before {
+  display: none;
+}
+
+.content-thumb--video video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .content-thumb::before {
   position: absolute;
   inset: 12%;
