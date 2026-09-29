@@ -127,6 +127,16 @@
       </div>
 
       <div class="brand-tab-panel" id="brand-panel-character" role="tabpanel" aria-labelledby="brand-tab-character" data-brand-panel="character" hidden>
+        <nav class="character-selector" aria-label="캐릭터 선택">
+          <a class="character-selector-button" href="#character-naru">
+            <span>01</span><strong>NARU</strong><small>ORIGINAL CHARACTER</small>
+          </a>
+          <a class="character-selector-button" href="#character-bukangi">
+            <span>02</span><strong>부캉이 NARU Edition</strong><small>REIMAGINED CHARACTER</small>
+          </a>
+        </nav>
+
+        <div class="character-entry" id="character-naru">
         <section class="character-hero" aria-labelledby="character-heading">
           <div class="character-portrait">
             <span class="character-portrait-label">NARU STUDIO · OFFICIAL CHARACTER</span>
@@ -144,12 +154,76 @@
           </div>
         </section>
 
+        <section class="guide-section character-motion" aria-labelledby="character-motion-heading">
+          <div class="guide-section-heading"><span class="guide-number">01</span><h2 id="character-motion-heading">NARU 애니메이션</h2><span>NARU IN MOTION</span></div>
+          <p class="character-motion-intro">표정과 움직임으로 만나는 NARU의 세 가지 순간입니다.</p>
+          <div class="character-motion-grid">
+            <article class="character-motion-card">
+              <div class="character-motion-video">
+                <video autoplay muted loop playsinline controls preload="metadata" aria-label="호기심을 표현하는 NARU 애니메이션">
+                  <source src="assets/videos/brand/naru-curiosity.mp4" type="video/mp4">
+                  브라우저가 동영상 재생을 지원하지 않습니다.
+                </video>
+                <span aria-hidden="true">01</span>
+              </div>
+              <div class="character-motion-caption"><h3>호기심</h3><small>CURIOSITY</small></div>
+            </article>
+            <article class="character-motion-card">
+              <div class="character-motion-video">
+                <video autoplay muted loop playsinline controls preload="metadata" aria-label="인사하는 NARU 애니메이션">
+                  <source src="assets/videos/brand/naru-greeting.mp4" type="video/mp4">
+                  브라우저가 동영상 재생을 지원하지 않습니다.
+                </video>
+                <span aria-hidden="true">02</span>
+              </div>
+              <div class="character-motion-caption"><h3>인사</h3><small>GREETING</small></div>
+            </article>
+            <article class="character-motion-card">
+              <div class="character-motion-video">
+                <video autoplay muted loop playsinline controls preload="metadata" aria-label="새로운 친구를 소개하는 NARU 애니메이션">
+                  <source src="assets/videos/brand/naru-new-friend.mp4" type="video/mp4">
+                  브라우저가 동영상 재생을 지원하지 않습니다.
+                </video>
+                <span aria-hidden="true">03</span>
+              </div>
+              <div class="character-motion-caption"><h3>새로운 친구 소개</h3><small>MEET A NEW FRIEND</small></div>
+            </article>
+          </div>
+        </section>
+
         <section class="guide-section character-turnaround" aria-labelledby="turnaround-heading">
-          <div class="guide-section-heading"><span class="guide-number">01</span><h2 id="turnaround-heading">캐릭터 삼면도</h2><span>CHARACTER TURNAROUND</span></div>
+          <div class="guide-section-heading"><span class="guide-number">02</span><h2 id="turnaround-heading">캐릭터 삼면도</h2><span>CHARACTER TURNAROUND</span></div>
           <figure class="turnaround-image">
             <img src="assets/images/brand/naru-turnaround.png" alt="NARU 캐릭터의 정면, 측면, 후면 삼면도">
           </figure>
         </section>
+        </div>
+
+        <div class="character-entry character-entry--bukangi" id="character-bukangi">
+          <section class="character-hero character-hero--bukangi" aria-labelledby="bukangi-heading">
+            <div class="character-portrait character-portrait--bukangi">
+              <span class="character-portrait-label">NARU STUDIO · REIMAGINED CHARACTER</span>
+              <img src="assets/images/brand/bukangi-naru-profile.png" alt="하늘색 후드와 헤드폰을 착용한 상어 캐릭터 부캉이 NARU Edition">
+            </div>
+            <div class="character-copy">
+              <span class="character-eyebrow">MEET OUR CHARACTER</span>
+              <h2 id="bukangi-heading">부캉이<br><em>NARU Edition</em></h2>
+              <p>부산에 찾아온 상어 ‘부캉이’를<br>NARU studio의 방식으로 재해석했습니다.</p>
+              <dl class="character-profile">
+                <div><dt>NAME</dt><dd>부캉이 NARU Edition</dd></div>
+                <div><dt>KEY COLOR</dt><dd><i aria-hidden="true"></i> NARU BLUE</dd></div>
+                <div><dt>ORIGIN</dt><dd>BUSAN</dd></div>
+              </dl>
+            </div>
+          </section>
+
+          <section class="guide-section character-turnaround" aria-labelledby="bukangi-turnaround-heading">
+            <div class="guide-section-heading"><span class="guide-number">01</span><h2 id="bukangi-turnaround-heading">캐릭터 삼면도</h2><span>CHARACTER TURNAROUND</span></div>
+            <figure class="turnaround-image turnaround-image--bukangi">
+              <img src="assets/images/brand/bukangi-naru-turnaround.png" alt="부캉이 NARU Edition의 정면, 좌우 측면, 후면 디자인">
+            </figure>
+          </section>
+        </div>
       </div>
     </div>
   </main>

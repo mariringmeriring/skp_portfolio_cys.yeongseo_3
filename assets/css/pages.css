@@ -1343,6 +1343,16 @@
 .brand-tab.is-active::after { transform: scaleX(1); }
 .brand-tab-panel[hidden] { display: none; }
 
+.character-selector { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: clamp(44px, 7vw, 76px); }
+.character-selector-button { position: relative; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 5px 16px; min-height: 104px; padding: 22px 24px; color: var(--color-muted); background: #fff; border: 1px solid var(--color-line); border-radius: var(--radius-md); text-align: left; cursor: pointer; transition: color var(--ease), background var(--ease), border-color var(--ease), transform var(--ease); }
+.character-selector-button:hover { color: var(--color-ink); border-color: var(--color-support); transform: translateY(-2px); }
+.character-selector-button:focus-visible { outline: 3px solid var(--color-support); outline-offset: 3px; }
+.character-selector-button > span { grid-row: 1 / 3; color: var(--color-support); font-family: var(--font-display); font-size: 11px; font-weight: 800; }
+.character-selector-button strong { font-family: var(--font-display); font-size: clamp(17px, 2vw, 24px); font-weight: 800; letter-spacing: -.035em; }
+.character-selector-button small { font-family: var(--font-display); font-size: 9px; font-weight: 700; letter-spacing: .1em; }
+.character-entry { scroll-margin-top: 28px; }
+.character-entry--bukangi { margin-top: clamp(84px, 12vw, 156px); padding-top: clamp(58px, 8vw, 96px); border-top: 1px solid var(--color-line); }
+
 .character-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
@@ -1357,12 +1367,23 @@
 .character-portrait-label { position: absolute; top: 24px; left: 24px; z-index: 2; padding: 8px 11px; color: var(--color-ink); background: rgba(255,255,255,.78); font-family: var(--font-display); font-size: 10px; font-weight: 800; letter-spacing: .08em; backdrop-filter: blur(8px); }
 .character-eyebrow { color: var(--color-support); font-family: var(--font-display); font-size: 11px; font-weight: 800; letter-spacing: .12em; }
 .character-copy h2 { margin: 16px 0 28px; font-family: var(--font-impact); font-size: var(--type-feature); letter-spacing: .01em; line-height: .95; white-space: nowrap; }
+.character-copy h2 em { display: inline-block; margin-top: 12px; color: var(--color-support); font-family: var(--font-display); font-size: clamp(20px, 2.2vw, 32px); font-style: normal; letter-spacing: -.035em; }
 .character-copy > p { color: var(--color-muted); font-size: clamp(16px, 1.5vw, 19px); line-height: 1.9; }
 .character-profile { margin-top: 46px; border-top: 1px solid var(--color-ink); }
 .character-profile div { display: grid; grid-template-columns: 120px 1fr; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--color-line); }
 .character-profile dt { color: var(--color-muted); font-family: var(--font-display); font-size: 10px; font-weight: 800; letter-spacing: .08em; }
 .character-profile dd { font-family: var(--font-display); font-size: 13px; font-weight: 700; }
 .character-profile i { display: inline-block; width: 11px; height: 11px; margin-right: 6px; background: var(--color-brand-main); border-radius: 50%; vertical-align: -1px; }
+.character-motion { margin-bottom: clamp(76px, 10vw, 132px); }
+.character-motion-intro { max-width: 620px; margin: -20px 0 32px; color: var(--color-muted); font-size: 15px; line-height: 1.75; }
+.character-motion-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.character-motion-card { min-width: 0; }
+.character-motion-video { position: relative; overflow: hidden; aspect-ratio: 528 / 752; background: linear-gradient(145deg, #f6fbfe, #e8f5fc); border: 1px solid var(--color-line); border-radius: var(--radius-md); }
+.character-motion-video video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.character-motion-video > span { position: absolute; top: 16px; left: 16px; display: grid; width: 36px; height: 36px; place-items: center; color: var(--color-ink); background: rgba(255,255,255,.82); border: 1px solid rgba(23,50,77,.1); border-radius: 50%; font-family: var(--font-display); font-size: 10px; font-weight: 800; backdrop-filter: blur(8px); pointer-events: none; }
+.character-motion-caption { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 18px 4px 0; }
+.character-motion-caption h3 { font-size: clamp(19px, 2vw, 25px); letter-spacing: -.035em; }
+.character-motion-caption small { color: var(--color-support); font-family: var(--font-display); font-size: 9px; font-weight: 800; letter-spacing: .08em; text-align: right; }
 .turnaround-placeholder { position: relative; display: grid; min-height: 480px; place-items: center; overflow: hidden; padding: 50px; background: linear-gradient(145deg, var(--color-surface), #fff); border: 1px dashed rgba(23,50,77,.28); border-radius: var(--radius-md); text-align: center; }
 .turnaround-placeholder > p { position: relative; z-index: 1; color: var(--color-muted); font-size: 13px; line-height: 1.7; }
 .turnaround-placeholder > p strong { color: var(--color-ink); font-family: var(--font-display); font-size: 12px; letter-spacing: .08em; }
@@ -1373,6 +1394,12 @@
 .turnaround-slots b { padding-bottom: 16px; color: var(--color-support); font-family: var(--font-display); font-size: 10px; letter-spacing: .12em; }
 .turnaround-image { overflow: hidden; width: 100%; aspect-ratio: 2 / 1; background: #fff; border: 1px solid var(--color-line); border-radius: var(--radius-md); }
 .turnaround-image img { display: block; width: 100%; height: 100%; padding: clamp(12px, 2vw, 30px); object-fit: contain; object-position: center; }
+.character-portrait--bukangi { background: linear-gradient(145deg, #f6fbfe, #e7f5fd); }
+.character-portrait--bukangi::before { position: absolute; top: 12%; right: 10%; width: 10px; height: 10px; content: ""; background: var(--color-primary); border-radius: 50%; box-shadow: 26px 20px 0 3px rgba(99,179,223,.28), -18px 40px 0 7px rgba(169,216,243,.3); }
+.character-portrait--bukangi img { padding: clamp(36px, 5vw, 76px) clamp(34px, 4.5vw, 66px) clamp(12px, 2vw, 28px); }
+.character-hero--bukangi .character-copy h2 { font-family: var(--font-display); font-size: clamp(54px, 6.3vw, 92px); letter-spacing: -.075em; white-space: normal; }
+.turnaround-image--bukangi { aspect-ratio: 2.03 / 1; background: linear-gradient(180deg, #fff, #fbfdfe); }
+.turnaround-image--bukangi img { padding: 0; }
 
 .brand-guide-meta {
   display: flex;
