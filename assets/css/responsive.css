@@ -107,7 +107,10 @@
 }
 
 @media (max-width: 767px) {
-  .shortform-video-grid { grid-template-columns: minmax(0, 390px); }
+  .shortform-video-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(12px, 4vw, 24px);
+  }
   .report-hub { min-height: auto; }
   .report-chooser,
   .bic-split-grid,
