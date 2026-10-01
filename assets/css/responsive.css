@@ -107,6 +107,7 @@
 }
 
 @media (max-width: 767px) {
+  .shortform-video-grid { grid-template-columns: minmax(0, 390px); }
   .report-hub { min-height: auto; }
   .report-chooser,
   .bic-split-grid,
