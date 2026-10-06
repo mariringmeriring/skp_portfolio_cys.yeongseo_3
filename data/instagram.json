@@ -1,0 +1,23 @@
+{
+  "status": "awaiting_api_sync",
+  "updatedAt": null,
+  "account": {
+    "id": null,
+    "username": "naru.studio.busan",
+    "url": "https://www.instagram.com/naru.studio.busan/",
+    "name": null,
+    "biography": null,
+    "profilePicture": null
+  },
+  "summary": {
+    "followers": null,
+    "mediaCount": null,
+    "averageEngagements": null,
+    "engagementRate": null,
+    "recentReach": null
+  },
+  "delta": { "followers": null },
+  "highlights": { "mostLiked": null, "mostCommented": null, "mostReached": null },
+  "history": [],
+  "recentPosts": []
+}

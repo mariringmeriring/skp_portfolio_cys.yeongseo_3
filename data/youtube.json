@@ -1,0 +1,16 @@
+{
+  "status": "awaiting_api_sync",
+  "updatedAt": null,
+  "channel": {
+    "id": "UC4Co3TmVcyKtfOuZgTMJvpw",
+    "url": "https://www.youtube.com/channel/UC4Co3TmVcyKtfOuZgTMJvpw",
+    "title": null,
+    "description": null,
+    "thumbnail": null
+  },
+  "summary": { "subscribers": null, "totalViews": null, "videoCount": null, "averageRecentViews": null, "engagementRate": null },
+  "delta": { "subscribers": null, "totalViews": null },
+  "highlights": { "mostViewed": null, "mostLiked": null, "mostCommented": null },
+  "history": [],
+  "recentVideos": []
+}

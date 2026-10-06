@@ -32,3 +32,14 @@ SK플래닛 관광 콘텐츠 제작 프로젝트의 조사, 제작물, SNS 분�
 4. 배포할 브랜치의 `/ (root)` 폴더를 선택하고 저장합니다.
 
 모든 링크와 에셋 경로가 상대경로로 작성되어 프로젝트형 GitHub Pages 주소에서도 별도 수정 없이 동작합니다.
+
+## SNS 자동 연동
+
+- YouTube 채널: `UC4Co3TmVcyKtfOuZgTMJvpw`
+- Instagram 계정: `naru.studio.busan`
+- `.github/workflows/sync-youtube.yml`이 두 플랫폼 데이터를 매일 00:00(KST)에 함께 갱신합니다.
+- YouTube Data API v3 키를 저장소의 **Settings → Secrets and variables → Actions**에서 `YOUTUBE_API_KEY`라는 이름으로 등록해야 합니다.
+- Instagram 전문 계정을 Meta 앱과 연결한 뒤 장기 액세스 토큰과 Instagram User ID를 각각 `INSTAGRAM_ACCESS_TOKEN`, `INSTAGRAM_USER_ID`라는 Actions Secret으로 등록해야 합니다. 토큰에는 계정·미디어·인사이트 조회 권한이 필요합니다.
+- 키 등록 후 Actions의 **Sync social dashboards → Run workflow**를 한 번 실행하면 최초 데이터가 바로 생성됩니다.
+- 동기화 결과는 `data/youtube.json`, `data/instagram.json`에 저장되며 SNS 페이지가 캐시 없이 읽습니다.
+- 한 플랫폼의 인증 정보가 아직 없으면 해당 플랫폼만 건너뛰고 다른 플랫폼의 동기화는 계속됩니다.
