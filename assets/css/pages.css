@@ -609,7 +609,7 @@
 
 .shortform-video-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(260px, 390px));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(24px, 4vw, 44px);
 }
 
