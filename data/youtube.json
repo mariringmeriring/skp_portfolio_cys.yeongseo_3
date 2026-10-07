@@ -1,16 +1,30 @@
 {
-  "status": "awaiting_api_sync",
-  "updatedAt": null,
+  "status": "ready",
+  "updatedAt": "2026-10-07T00:07:00.800Z",
+  "source": "public-channel-fallback",
   "channel": {
     "id": "UC4Co3TmVcyKtfOuZgTMJvpw",
     "url": "https://www.youtube.com/channel/UC4Co3TmVcyKtfOuZgTMJvpw",
-    "title": null,
-    "description": null,
-    "thumbnail": null
+    "title": "덕질하러부산감?",
+    "description": "부산 덕질 정보/명소/팝업/전시 모아보자!\n",
+    "thumbnail": "https://yt3.googleusercontent.com/hBtovUln9CUtyi4yCbOKAUIOvAPIWMWbPwJOv2JVnLfc53VmpqtaMEpH-RzV8ZT7ksjSxXIg4Q=s0"
   },
-  "summary": { "subscribers": null, "totalViews": null, "videoCount": null, "averageRecentViews": null, "engagementRate": null },
-  "delta": { "subscribers": null, "totalViews": null },
-  "highlights": { "mostViewed": null, "mostLiked": null, "mostCommented": null },
+  "summary": {
+    "subscribers": null,
+    "totalViews": null,
+    "videoCount": 0,
+    "averageRecentViews": null,
+    "engagementRate": null
+  },
+  "delta": {
+    "subscribers": null,
+    "totalViews": null
+  },
+  "highlights": {
+    "mostViewed": null,
+    "mostLiked": null,
+    "mostCommented": null
+  },
   "history": [],
   "recentVideos": []
 }

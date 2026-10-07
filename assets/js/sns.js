@@ -34,10 +34,6 @@
   const instagramCard = (post) => { const published = new Intl.DateTimeFormat("ko-KR", { timeZone: "Asia/Seoul", year: "numeric", month: "short", day: "numeric" }).format(new Date(post.timestamp)); const thumbnail = post.thumbnailUrl || post.mediaUrl || ""; const caption = post.caption || `${post.mediaType || "Instagram"} 게시물`; const metric = (value) => value === null || value === undefined ? "—" : compact.format(Number(value)); return `<article class="youtube-video-card instagram-post-card"><a class="video-thumbnail" href="${escapeHtml(post.permalink)}" target="_blank" rel="noopener noreferrer" aria-label="Instagram 게시물 보기"><img src="${escapeHtml(thumbnail)}" alt="" loading="lazy"><span>${escapeHtml(post.mediaType || "POST")}</span></a><div class="video-card-body"><time>${published}</time><h3>${escapeHtml(caption)}</h3><dl><div><dt>좋아요</dt><dd>${metric(post.likes)}</dd></div><div><dt>댓글</dt><dd>${metric(post.comments)}</dd></div><div><dt>도달</dt><dd>${metric(post.reach)}</dd></div><div><dt>저장·공유</dt><dd>${metric(post.savesAndShares)}</dd></div></dl></div></article>`; };
 
   const render = (data) => {
-    const isReady = data.status === "ready" && data.updatedAt;
-    setText("[data-sync-label]", isReady ? "자동 동기화 정상" : "YouTube 연결 준비됨");
-    setText("[data-last-updated]", isReady ? `마지막 업데이트 ${dateTime.format(new Date(data.updatedAt))}` : "API 데이터 동기화 전");
-    dashboard.querySelector(".sns-sync-state")?.classList.toggle("is-ready", Boolean(isReady));
     if (data.channel?.title) setText("[data-channel-title]", data.channel.title);
     if (data.channel?.url) dashboard.querySelector("[data-channel-link]")?.setAttribute("href", data.channel.url);
     const summary = data.summary || {};
@@ -68,6 +64,14 @@
   Promise.allSettled([getData("youtube"), getData("instagram")]).then(([youtube, instagram]) => {
     if (youtube.status === "fulfilled") render(youtube.value);
     if (instagram.status === "fulfilled") renderInstagram(instagram.value);
-    if (youtube.status === "rejected" && instagram.status === "rejected") { setText("[data-sync-label]", "데이터를 불러오지 못했습니다"); setText("[data-last-updated]", "잠시 후 다시 확인해 주세요"); }
+    const youtubeReady = youtube.status === "fulfilled" && youtube.value.status === "ready";
+    const instagramReady = instagram.status === "fulfilled" && instagram.value.status === "ready";
+    const latestUpdate = [youtubeReady ? youtube.value.updatedAt : null, instagramReady ? instagram.value.updatedAt : null].filter(Boolean).sort().at(-1);
+    if (youtubeReady && instagramReady) setText("[data-sync-label]", "자동 동기화 정상");
+    else if (youtubeReady) setText("[data-sync-label]", "YouTube 연동 완료 · Instagram 설정 필요");
+    else if (instagramReady) setText("[data-sync-label]", "Instagram 연동 완료 · YouTube 설정 필요");
+    else setText("[data-sync-label]", "SNS 연동 설정 필요");
+    setText("[data-last-updated]", latestUpdate ? `마지막 업데이트 ${dateTime.format(new Date(latestUpdate))}` : "데이터 동기화 전");
+    dashboard.querySelector(".sns-sync-state")?.classList.toggle("is-ready", youtubeReady && instagramReady);
   });
 })();

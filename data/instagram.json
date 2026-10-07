@@ -1,5 +1,6 @@
 {
-  "status": "awaiting_api_sync",
+  "status": "configuration_required",
+  "message": "GitHub Actions Secrets에 INSTAGRAM_ACCESS_TOKEN과 INSTAGRAM_USER_ID를 등록해야 합니다.",
   "updatedAt": null,
   "account": {
     "id": null,

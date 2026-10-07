@@ -10,8 +10,8 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const dataPath = resolve(root, "data/instagram.json");
 
 if (!ACCESS_TOKEN || !USER_ID) {
-  console.log("INSTAGRAM_ACCESS_TOKEN 또는 INSTAGRAM_USER_ID가 없어 Instagram 동기화를 건너뜁니다.");
-  process.exit(0);
+  console.error("::error title=Instagram credentials missing::INSTAGRAM_ACCESS_TOKEN과 INSTAGRAM_USER_ID를 GitHub Actions Secrets에 등록해야 합니다.");
+  process.exit(2);
 }
 
 const request = async (path, params = {}) => {
@@ -32,6 +32,12 @@ const topBy = (posts, key) => {
 };
 
 const previous = JSON.parse(await readFile(dataPath, "utf8"));
+const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Seoul", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+const previousUpdateDate = previous.updatedAt ? new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Seoul", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(previous.updatedAt)) : null;
+if (previousUpdateDate === today && process.env.FORCE_SYNC !== "true") {
+  console.log(`Instagram ${today} 데이터가 이미 있어 중복 동기화를 건너뜁니다.`);
+  process.exit(0);
+}
 const account = await request(USER_ID, { fields: "id,username,name,biography,profile_picture_url,followers_count,follows_count,media_count" });
 if (account.username?.toLowerCase() !== USERNAME) throw new Error(`Instagram 계정 불일치: @${account.username} (예상: @${USERNAME})`);
 const mediaResponse = await request(`${USER_ID}/media`, { fields: "id,caption,media_type,media_product_type,media_url,thumbnail_url,permalink,timestamp,like_count,comments_count", limit: "12" });
@@ -62,7 +68,6 @@ const posts = await Promise.all((mediaResponse.data || []).map(async (post) => {
 
 const followers = numeric(account.followers_count) || 0;
 const previousSnapshot = previous.history?.at(-1) || null;
-const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Seoul", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
 const snapshot = { date: `${today}T00:00:00+09:00`, followers, mediaCount: numeric(account.media_count) || 0 };
 const history = [...(previous.history || [])];
 if (history.at(-1)?.date?.slice(0, 10) === today) history[history.length - 1] = snapshot;
