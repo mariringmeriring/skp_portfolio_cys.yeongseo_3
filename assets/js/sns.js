@@ -7,6 +7,13 @@
   const setText = (selector, value) => { const element = dashboard.querySelector(selector); if (element) element.textContent = value; };
   const formatMetric = (value, options = {}) => value === null || value === undefined || Number.isNaN(Number(value)) ? "—" : options.percent ? `${Number(value).toFixed(2)}%` : compact.format(Number(value));
   const formatDelta = (value, label) => value === null || value === undefined ? "비교 데이터 대기 중" : `${Number(value) > 0 ? "+" : ""}${number.format(Number(value))} ${label}`;
+  const setPlatformState = (platform, state, label) => {
+    const element = dashboard.querySelector(`[data-platform-state="${platform}"]`);
+    if (!element) return;
+    element.dataset.state = state;
+    const labelElement = element.querySelector("span:last-child");
+    if (labelElement) labelElement.textContent = label;
+  };
 
   const renderHistory = (history = []) => {
     const chart = dashboard.querySelector("[data-history-chart]");
@@ -67,11 +74,17 @@
     const youtubeReady = youtube.status === "fulfilled" && youtube.value.status === "ready";
     const instagramReady = instagram.status === "fulfilled" && instagram.value.status === "ready";
     const latestUpdate = [youtubeReady ? youtube.value.updatedAt : null, instagramReady ? instagram.value.updatedAt : null].filter(Boolean).sort().at(-1);
-    if (youtubeReady && instagramReady) setText("[data-sync-label]", "자동 동기화 정상");
-    else if (youtubeReady) setText("[data-sync-label]", "YouTube 연동 완료 · Instagram 설정 필요");
-    else if (instagramReady) setText("[data-sync-label]", "Instagram 연동 완료 · YouTube 설정 필요");
-    else setText("[data-sync-label]", "SNS 연동 설정 필요");
+    setPlatformState("youtube", youtube.status === "rejected" ? "error" : youtubeReady ? "ready" : "empty", youtube.status === "rejected" ? "동기화 실패" : youtubeReady ? "정상 업데이트" : "데이터 없음");
+    setPlatformState("instagram", instagram.status === "rejected" ? "error" : instagramReady ? "ready" : "empty", instagram.status === "rejected" ? "동기화 실패" : instagramReady ? "정상 업데이트" : "데이터 없음");
+    const hasFailure = youtube.status === "rejected" || instagram.status === "rejected";
+    if (hasFailure) setText("[data-sync-label]", "일부 데이터 동기화 실패");
+    else if (youtubeReady && instagramReady) setText("[data-sync-label]", "자동 동기화 정상");
+    else if (youtubeReady) setText("[data-sync-label]", "YouTube 정상 · Instagram 데이터 없음");
+    else if (instagramReady) setText("[data-sync-label]", "Instagram 정상 · YouTube 데이터 없음");
+    else setText("[data-sync-label]", "연결됨 · 수집된 데이터 없음");
     setText("[data-last-updated]", latestUpdate ? `마지막 업데이트 ${dateTime.format(new Date(latestUpdate))}` : "데이터 동기화 전");
-    dashboard.querySelector(".sns-sync-state")?.classList.toggle("is-ready", youtubeReady && instagramReady);
+    const syncState = dashboard.querySelector(".sns-sync-state");
+    syncState?.classList.toggle("is-ready", youtubeReady && instagramReady);
+    syncState?.classList.toggle("is-error", hasFailure);
   });
 })();

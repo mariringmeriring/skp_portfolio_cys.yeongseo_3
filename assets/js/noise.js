@@ -9,13 +9,13 @@ const audioLabel = document.querySelector("[data-audio-label]");
 
 if (audio && audioToggle && audioLabel) {
   audio.volume = 0.72;
-  let soundEnabled = true;
+  let soundEnabled = false;
 
   const renderAudioState = () => {
     audioToggle.classList.toggle("is-on", soundEnabled);
     audioToggle.setAttribute("aria-pressed", String(soundEnabled));
-    audioToggle.setAttribute("aria-label", soundEnabled ? "배경 음악 끄기" : "배경 음악 켜기");
-    audioLabel.textContent = soundEnabled ? "SOUND ON" : "SOUND OFF";
+    audioToggle.setAttribute("aria-label", soundEnabled ? "BUS 1003 일시정지" : "BUS 1003 재생");
+    audioLabel.textContent = soundEnabled ? "재생 중" : "재생";
   };
 
   const playAudio = () => {
@@ -30,10 +30,6 @@ if (audio && audioToggle && audioLabel) {
     renderAudioState();
   });
 
-  playAudio();
-  ["pointerdown", "keydown", "touchstart"].forEach((eventName) => {
-    window.addEventListener(eventName, playAudio, { once: true, passive: eventName !== "keydown" });
-  });
   renderAudioState();
 }
 
