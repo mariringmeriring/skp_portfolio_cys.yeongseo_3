@@ -123,8 +123,8 @@
   .platform-section-aside { align-items: flex-start; }
   .sns-guide-grid { grid-template-columns: 1fr; }
   .shortform-video-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(12px, 4vw, 24px);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(10px, 2.4vw, 18px);
   }
   .report-hub { min-height: auto; }
   .report-chooser,
@@ -458,6 +458,7 @@
 }
 
 @media (max-width: 420px) {
+  .shortform-video-grid { grid-template-columns: 1fr; }
   .instagram-content-grid { grid-template-columns: 1fr; }
   .sns-metric-grid,
   .youtube-content-grid { grid-template-columns: 1fr; }
